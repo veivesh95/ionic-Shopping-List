@@ -13,6 +13,7 @@ import { FIREBASE_CONFIG } from "./firebase.credentials";
 import { ShoppingListService } from "../service/shopping-list/shopping-list.service";
 
 import { MyApp } from "./app.component";
+import { ToastService } from "../service/components/ToastService";
 
 @NgModule({
   declarations: [MyApp],
@@ -28,7 +29,8 @@ import { MyApp } from "./app.component";
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    ShoppingListService
+    ShoppingListService,
+    ToastService
   ]
 })
 export class AppModule {}
