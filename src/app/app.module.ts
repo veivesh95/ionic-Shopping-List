@@ -6,9 +6,9 @@ import { StatusBar } from "@ionic-native/status-bar";
 
 import { AngularFireModule } from "angularfire2";
 import {
-  AngularFireDatabaseModule,
-  AngularFireDatabase
+  AngularFireDatabaseModule
 } from "angularfire2/database";
+import { AngularFireAuthModule } from "angularfire2/auth";
 import { FIREBASE_CONFIG } from "./firebase.credentials";
 import { ShoppingListService } from "../service/shopping-list/shopping-list.service";
 
@@ -21,7 +21,8 @@ import { ToastService } from "../service/components/ToastService";
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp],
